@@ -33,8 +33,9 @@ const ViewUser = () => {
         <div className="container">          
             <Link className='btn btn-primary mt-3' to='/'>Back to Home</Link>            
              <Link className="btn btn-outline-primary mx-3" to={`/users/edit/${user.id}`}>Edit</Link>
+             <hr />
             <h2>User Id: {user.id}</h2>
-            <hr />
+          
             <ul class="list-group">
                 <li className="list-group-item">{ user.name }</li>
                 <li className="list-group-item">{ user.username }</li>
