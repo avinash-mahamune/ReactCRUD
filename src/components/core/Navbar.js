@@ -5,7 +5,7 @@ import { Link, NavLink } from 'react-router-dom'
 
 const Navbar = () => {
     return (
-        <div className="container">
+        <div className="container-fluid">
             <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
                 <NavLink className="navbar-brand" to="/">React Users</NavLink>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -14,13 +14,16 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mr-auto">
                         <li className="nav-item">
-                            <NavLink className="nav-link" exact to="/">HOME</NavLink>
+                            <NavLink className="nav-link" exact to="/">Home</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" exact to="/Contact">CONTACT</NavLink>
+                            <NavLink className="nav-link" exact to="/Contact">Contact</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" exact to="/About">ABOUT</NavLink>
+                            <NavLink className="nav-link" exact to="/About">About</NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink className="nav-link" exact to="/Dashboard">Dashboard</NavLink>
                         </li>
                        
                     </ul>

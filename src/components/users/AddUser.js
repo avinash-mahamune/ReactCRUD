@@ -13,6 +13,7 @@ const AddUser = () => {
   });
 
   const { name, username, email, phone, website } = user;
+
   const onInputChange = e => {
       console.log('change Event-->',e.target)
     setUser({ ...user, [e.target.name]: e.target.value });
@@ -23,6 +24,7 @@ const AddUser = () => {
     await axios.post("http://localhost:3003/users", user);
     history.push("/");
   };
+  
   return (
     <div className="container">
       <div className="w-75 mx-auto shadow p-5">

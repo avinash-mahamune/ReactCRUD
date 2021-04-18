@@ -17,13 +17,13 @@ const ViewUser = () => {
     const { id } = useParams();
 
     const loadUser = async () => {
-        const result = await axios.get(`http://localhost:3003/users/${id}`);
+              const result = await axios.get(`http://localhost:3003/users/${id}`);
         console.log(result.data);
         setUser(result.data);
 
     };
 
-    useEffect(() => {
+    useEffect(() => {       
         loadUser();
     }, []);
 
