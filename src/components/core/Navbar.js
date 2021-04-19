@@ -25,7 +25,9 @@ const Navbar = () => {
                         <li className="nav-item">
                             <NavLink className="nav-link" exact to="/Dashboard">Dashboard</NavLink>
                         </li>
-                       
+                        <li className="nav-item">
+                            <NavLink className="nav-link" exact to="/popup">popup</NavLink>
+                        </li>
                     </ul>
                     <Link className="btn btn-light" to="/users/add">ADD USER</Link>
                 </div>

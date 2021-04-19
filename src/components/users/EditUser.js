@@ -13,6 +13,8 @@ const EditUser = () => {
     website: ""
   });
 
+  
+
   const { name, username, email, phone, website } = user;
   const onInputChange = e => {
     setUser({ ...user, [e.target.name]: e.target.value });
@@ -25,7 +27,7 @@ const EditUser = () => {
   const onSubmit = async e => {
     e.preventDefault();
     await axios.put(`http://localhost:3003/users/${id}`, user);
-    history.push("/");
+    history.goBack();
   };
 
   const loadUser = async () => {

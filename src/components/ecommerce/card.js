@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { Link} from 'react-router-dom'
 
-const Card = () => {
+const Card = (props) => {
+    console.log("props",props);
 
 
-
-
-
+    
     return (
         <div className="card-wrapper">
             <div className="am-header">
-                <h1>Product Name</h1>
-
+                <h1>{props.Users.name}</h1>
                 <div className="dropdown">
                     <button className="btn dropdown-toggle" type="button" data-toggle="dropdown">
                         {/* <img src="../../assets/images/more.svg"  alt="" /> */}
@@ -18,86 +18,87 @@ const Card = () => {
 
                     </button>
                     <ul className="dropdown-menu">
-                        <li><a href="#">
-                            <i class="fal fa-pen"></i>
-                            Edit</a></li>
+
+                    <Link className="" to={`/users/edit/${props.Users.id}`}> 
+                        <li><a href="#"><i className="fal fa-pen"></i>Edit</a></li>
+                    </Link>
+                       
                         <li><a href="#">Duplicate</a></li>
                         <li><a href="#">Delete</a></li>
                     </ul>
                 </div>
             </div>
             <div className="am-card-body">
-                <h1>Get Well Accounts</h1>
-                <p>Default Success Play for all accounts the need to get well in terms of their Health Score</p>
+                <h1>{props.Users.email}</h1>
+                <p>{props.Users.phone}</p>               
             </div>
             <div className="am-footer">
                 <div className='footer-left'>
                     <div className="footer-instance">
-                        <a href="">12</a>
+                        <a href="">{props.Users.id}</a>
                     </div>
-                    <p>Instances</p>
-
-
+                    <p>{props.Users.username}</p>
                     <div className="custom-tooltip instance-tooltip">
+
                         <header>
                             <h2>Success Plays (12)</h2>
                             <a href="#">View All</a>
                         </header>
                         <ul>
                             <li>
-                                <p class="instance-name">Renewal Account Instance 01</p>
+                                <p className="instance-name">Renewal Account Instance 01</p>
                             </li>
                             <li>
-                                <p class="instance-name">Renewal Account Instance 02</p>
+                                <p className="instance-name">Renewal Account Instance 02</p>
                             </li>
                             <li>
-                                <p class="instance-name">Renewal Account Instance 03</p>
+                                <p className="instance-name">Renewal Account Instance 03</p>
                             </li>
                             <li>
-                                <p class="instance-name">Renewal Account Instance 04</p>
+                                <p className="instance-name">Renewal Account Instance 04</p>
                             </li>
                             <li>
-                                <p class="instance-name">Renewal Account Instance 05</p>
+                                <p className="instance-name">Renewal Account Instance 05</p>
                             </li>
                             <li>
-                                <p class="instance-name">Renewal Account Instance 06</p>
+                                <p className="instance-name">Renewal Account Instance 06</p>
                             </li>
                             <li>
-                                <p class="instance-name">Renewal Account Instance 07</p>
+                                <p className="instance-name">Renewal Account Instance 07</p>
                             </li>
                             <li>
-                                <p class="instance-name">Renewal Account Instance 08</p>
+                                <p className="instance-name">Renewal Account Instance 08</p>
                             </li>
                             <li>
-                                <p class="instance-name">Renewal Account Instance 09</p>
+                                <p className="instance-name">Renewal Account Instance 09</p>
                             </li>
                             <li>
-                                <p class="instance-name">Renewal Account Instance 10</p>
+                                <p className="instance-name">Renewal Account Instance 10</p>
                             </li>
                             <li>
-                                <p class="instance-name">Renewal Account Instance 11</p>
+                                <p className="instance-name">Renewal Account Instance 11</p>
                             </li>
                             <li>
-                                <p class="instance-name">Renewal Account Instance 12</p>
+                                <p className="instance-name">Renewal Account Instance 12</p>
                             </li>
 
 
                         </ul>
+                    
                     </div>
-
-
-
                 </div>
 
                 <div className='footer-right'>
                     <div className="footer-badge">
-                        Churn
+                    {props.Users.website}
                     </div>
 
                 </div>
 
             </div>
         </div>
+
+
 
     )
 }

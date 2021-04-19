@@ -19,6 +19,7 @@ import AddUser from './components/users/AddUser'
 import EditUser from './components/users/EditUser';
 import ViewUser from './components/users/ViewUser';
 import Dashboard from './components/ecommerce/dashboard';
+import popup from './components/snippet/popup';
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
             <Route exact path='/users/add' component={AddUser} />
             <Route exact path='/users/edit/:id' component={EditUser} />
             <Route exact path='/dashboard' component={Dashboard} />
+            <Route exact path='/popup' component={popup} />
             <Route exact path='/users/viewuser/:id' component={ViewUser} />
             <Route component={NotFound} /> 
           </Switch>

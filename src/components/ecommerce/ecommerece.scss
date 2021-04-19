@@ -4,7 +4,9 @@
 .card-wrapper{
     border: 1px solid #E5E5E8;
     margin: 25px 15px;
-    max-width: 23%;
+    min-width: 350px;
+    width: 350px;
+    max-width: 350px;
     .am-header{
         display: flex;
         align-items: center;
