@@ -14,7 +14,10 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mr-auto">
                         <li className="nav-item">
-                            <NavLink className="nav-link" exact to="/">Home</NavLink>
+                            <NavLink className="nav-link" exact to="/">Login</NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink className="nav-link" exact to="/home">Home</NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink className="nav-link" exact to="/Contact">Contact</NavLink>
@@ -26,8 +29,8 @@ const Navbar = () => {
                             <NavLink className="nav-link" exact to="/Dashboard">Dashboard</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" exact to="/popup">popup</NavLink>
-                        </li>
+                            <NavLink className="nav-link" exact to="/popup">Popup</NavLink>
+                        </li>                       
                     </ul>
                     <Link className="btn btn-light" to="/users/add">ADD USER</Link>
                 </div>
